@@ -1,6 +1,5 @@
 
 const Twit = require('twit');
-const uuid = require('node-uuid');
 const config = require('./config.json');
 const axios = require('axios');
 
