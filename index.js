@@ -21,7 +21,7 @@ stream.on('tweet',  tweet => {
     title: 'GuriVR - Twitter',
     body: body
   }).then(res => {
-    T.post('statuses/update', { status: `@${tweet.user.screen_name} your scene is here http://gurivr.s3-website-us-east-1.amazonaws.com/s/${res.data._id}.html` }, function(err, data, response) {});
+    T.post('statuses/update', { status: `@${tweet.user.screen_name} your scene is here https://s3.amazonaws.com/gurivr/s/${res.data._id}.html` }, function(err, data, response) {});
   });
 
 });
