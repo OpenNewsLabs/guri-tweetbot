@@ -8,6 +8,7 @@ const T = new Twit(config);
 const stream = T.stream('user', { stringify_friend_ids: true });
 stream.on('tweet',  tweet => {
   if(tweet.user.id_str === config.account_id) return;
+  if(tweet.retweeted_status) return;
 
   const media = tweet.entities.media
   .filter(m => m.type === 'photo');
